@@ -2,7 +2,7 @@ data:extend({
     {
         type = "item",
         name = "s3-bucket-passive-provider",
-        icon = "__base__/graphics/icons/submachine-gun.png",
+        icon = "__cloudorio__/graphics/s3bucket.png",
         icon_size = 32,
         flags = {"goes-to-quickbar"},
         subgroup = "storage",
@@ -13,7 +13,7 @@ data:extend({
     {
         type = "item",
         name = "s3-bucket-storage",
-        icon = "__base__/graphics/icons/submachine-gun.png",
+        icon = "__cloudorio__/graphics/s3bucket.png",
         icon_size = 32,
         flags = {"goes-to-quickbar"},
         subgroup = "storage",
@@ -24,7 +24,7 @@ data:extend({
     {
         type = "item",
         name = "s3-bucket-requester",
-        icon = "__base__/graphics/icons/submachine-gun.png",
+        icon = "__cloudorio__/graphics/s3bucket.png",
         icon_size = 32,
         flags = {"goes-to-quickbar"},
         subgroup = "storage",

@@ -3,7 +3,7 @@ data:extend({
     {
         type = "recipe",
         name = "s3-bucket-storage",
-        energy_required = 3,
+        energy_required = 1,
         enabled = false,
         ingredients =
             {
