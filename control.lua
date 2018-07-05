@@ -1,3 +1,6 @@
+
+
+
 script.on_event({defines.events.on_tick},
     function (e)
         if e.tick % 60 == 0 then --common trick to reduce how often this runs, we don't want it running every tick, just 1/second
@@ -41,27 +44,9 @@ script.on_event({defines.events.on_tick},
     end
 )
 
-script.on_event({defines.events.on_player_changed_position},
-    function (e)
-        local surface = game.surfaces[1]
-        local p = game.players[e.player_index].position
-        
-        local existing = surface.get_tile(p).name
-        local isStoneBrick = true -- surface.find_entity("stone-brick", p) ~= nil
-        local future = "concrete"
-        
-        if existing ~= "refined-concrete" then
-            if not isStoneBrick then
-                -- surface.create_entity{name="stone-brick" ,position=p}
-                -- surface.set_tiles{{name="stone-brick", position=p}}
-            else
-                if existing == "concrete" then
-                    future = "refined-concrete"
-                end
-                surface.set_tiles{{name=future, position=p}}
-            end
-        end
 
-    end
-)
+local function on_init() 
+    game.surfaces[1].always_day = true
+end
 
+script.on_init(on_init)
